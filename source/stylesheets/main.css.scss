@@ -1,55 +1,82 @@
-@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,100&subset=latin,cyrillic-ext);
 
-body {
-  background: #d4d4d4 image-url("background.png");
-  text-align: center;
-  font-family: sans-serif; }
-
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: image-url("middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
-
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html, body {
+  height: 100%;
+  color: #FFF;
+}
+.container, .row-fluid {
+  height: 100%;
+}
+#main {
+  background-image: image-url("bg.jpg");
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.left-side p {
+  font-family: "HelveticaNeue-UltraLight";
+  font-size: 60px;
+  color: #fff;
+  line-height: 65px;
+  width: 90%;
+  margin: 20px 0 0 20px;
+}
+.right-side {
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(rgba(0,0,0,0)));
+  background-image: -webkit-linear-gradient(left, #000, rgba(0,0,0,0));
+  background-image: -moz-linear-gradient(left, #000, rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left, #000, rgba(0,0,0,0));
+  background-image: linear-gradient(left, #000, rgba(0,0,0,0));
+  height: 100%;
+}
+#right_side_content {
+  margin: 180px 50px 0 50px;
+}
+#article {
+  font-size: 45px;
+  font-family: "HelveticaNeue-UltraLight";
+  display: block;
+  margin-bottom: 46px;
+}
+#date {
+  font-family: "HelveticaNeue-CondensedBold";
+  font-size: 30px;
+  display: block;
+  margin-bottom: 30px;
+}
+.right-side h1 {
+  font-family: "HelveticaNeue-CondensedBold";
+  font-size: 45px;
+  margin-bottom: 26px;
+  display: block;
+}
+#content {
+  font-family: "PT Sans";
+  font-size: 18px;
+  color: #e5e5e5;
+  line-height: 22px;
+}
+.right-side button a{
+  color: #FFF;
+  text-decoration: none;
+}
+.right-side button {
+  font-size: 17px;
+  font-family: "HelveticaNeue-CondensedBold";
+  color: #FFF;
+  width: 250px;
+  height: 65px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #cc0000;
+  border: 0;
+  -webkit-box-shadow: 0 5px 0 0 #6d0019, 0 10px 17px 3px rgba(255,255,255, 0.19);
+  -moz-box-shadow: 0 5px 0 0 #6d0019, 0 10px 17px 3px rgba(255,255,255, 0.19);
+  box-shadow: 0 5px 0 0 #6d0019, 0 10px 17px 3px rgba(255,255,255, 0.19);
 }
